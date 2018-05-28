@@ -56,6 +56,7 @@
             this.TextBox00.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox00.Location = new System.Drawing.Point(12, 12);
             this.TextBox00.Name = "TextBox00";
+            this.TextBox00.ReadOnly = true;
             this.TextBox00.Size = new System.Drawing.Size(60, 60);
             this.TextBox00.TabIndex = 0;
             this.TextBox00.Text = "2";
@@ -65,6 +66,7 @@
             this.TextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox10.Location = new System.Drawing.Point(78, 12);
             this.TextBox10.Name = "TextBox10";
+            this.TextBox10.ReadOnly = true;
             this.TextBox10.Size = new System.Drawing.Size(60, 60);
             this.TextBox10.TabIndex = 1;
             this.TextBox10.Text = "";
@@ -74,6 +76,7 @@
             this.TextBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox20.Location = new System.Drawing.Point(144, 12);
             this.TextBox20.Name = "TextBox20";
+            this.TextBox20.ReadOnly = true;
             this.TextBox20.Size = new System.Drawing.Size(60, 60);
             this.TextBox20.TabIndex = 2;
             this.TextBox20.Text = "";
@@ -83,6 +86,7 @@
             this.TextBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox30.Location = new System.Drawing.Point(210, 12);
             this.TextBox30.Name = "TextBox30";
+            this.TextBox30.ReadOnly = true;
             this.TextBox30.Size = new System.Drawing.Size(60, 60);
             this.TextBox30.TabIndex = 3;
             this.TextBox30.Text = "";
@@ -92,6 +96,7 @@
             this.TextBox01.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox01.Location = new System.Drawing.Point(12, 78);
             this.TextBox01.Name = "TextBox01";
+            this.TextBox01.ReadOnly = true;
             this.TextBox01.Size = new System.Drawing.Size(60, 60);
             this.TextBox01.TabIndex = 4;
             this.TextBox01.Text = "";
@@ -101,6 +106,7 @@
             this.TextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox11.Location = new System.Drawing.Point(78, 78);
             this.TextBox11.Name = "TextBox11";
+            this.TextBox11.ReadOnly = true;
             this.TextBox11.Size = new System.Drawing.Size(60, 60);
             this.TextBox11.TabIndex = 5;
             this.TextBox11.Text = "";
@@ -110,6 +116,7 @@
             this.TextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox21.Location = new System.Drawing.Point(144, 78);
             this.TextBox21.Name = "TextBox21";
+            this.TextBox21.ReadOnly = true;
             this.TextBox21.Size = new System.Drawing.Size(60, 60);
             this.TextBox21.TabIndex = 6;
             this.TextBox21.Text = "";
@@ -119,6 +126,7 @@
             this.TextBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox31.Location = new System.Drawing.Point(210, 78);
             this.TextBox31.Name = "TextBox31";
+            this.TextBox31.ReadOnly = true;
             this.TextBox31.Size = new System.Drawing.Size(60, 60);
             this.TextBox31.TabIndex = 7;
             this.TextBox31.Text = "";
@@ -128,6 +136,7 @@
             this.TextBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox33.Location = new System.Drawing.Point(210, 210);
             this.TextBox33.Name = "TextBox33";
+            this.TextBox33.ReadOnly = true;
             this.TextBox33.Size = new System.Drawing.Size(60, 60);
             this.TextBox33.TabIndex = 15;
             this.TextBox33.Text = "";
@@ -137,6 +146,7 @@
             this.TextBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox23.Location = new System.Drawing.Point(144, 210);
             this.TextBox23.Name = "TextBox23";
+            this.TextBox23.ReadOnly = true;
             this.TextBox23.Size = new System.Drawing.Size(60, 60);
             this.TextBox23.TabIndex = 14;
             this.TextBox23.Text = "";
@@ -146,6 +156,7 @@
             this.TextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox13.Location = new System.Drawing.Point(78, 210);
             this.TextBox13.Name = "TextBox13";
+            this.TextBox13.ReadOnly = true;
             this.TextBox13.Size = new System.Drawing.Size(60, 60);
             this.TextBox13.TabIndex = 13;
             this.TextBox13.Text = "";
@@ -155,6 +166,7 @@
             this.TextBox03.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox03.Location = new System.Drawing.Point(12, 210);
             this.TextBox03.Name = "TextBox03";
+            this.TextBox03.ReadOnly = true;
             this.TextBox03.Size = new System.Drawing.Size(60, 60);
             this.TextBox03.TabIndex = 12;
             this.TextBox03.Text = "";
@@ -164,6 +176,7 @@
             this.TextBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox32.Location = new System.Drawing.Point(210, 144);
             this.TextBox32.Name = "TextBox32";
+            this.TextBox32.ReadOnly = true;
             this.TextBox32.Size = new System.Drawing.Size(60, 60);
             this.TextBox32.TabIndex = 11;
             this.TextBox32.Text = "";
@@ -173,6 +186,7 @@
             this.TextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox22.Location = new System.Drawing.Point(144, 144);
             this.TextBox22.Name = "TextBox22";
+            this.TextBox22.ReadOnly = true;
             this.TextBox22.Size = new System.Drawing.Size(60, 60);
             this.TextBox22.TabIndex = 10;
             this.TextBox22.Text = "";
@@ -182,6 +196,7 @@
             this.TextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox12.Location = new System.Drawing.Point(78, 144);
             this.TextBox12.Name = "TextBox12";
+            this.TextBox12.ReadOnly = true;
             this.TextBox12.Size = new System.Drawing.Size(60, 60);
             this.TextBox12.TabIndex = 9;
             this.TextBox12.Text = "";
@@ -191,6 +206,7 @@
             this.TextBox02.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBox02.Location = new System.Drawing.Point(12, 144);
             this.TextBox02.Name = "TextBox02";
+            this.TextBox02.ReadOnly = true;
             this.TextBox02.Size = new System.Drawing.Size(60, 60);
             this.TextBox02.TabIndex = 8;
             this.TextBox02.Text = "";
@@ -273,6 +289,8 @@
             this.Controls.Add(this.TextBox00);
             this.Name = "Main";
             this.Text = "2048";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.ResumeLayout(false);
 
         }

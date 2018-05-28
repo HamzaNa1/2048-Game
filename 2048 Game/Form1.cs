@@ -23,6 +23,8 @@ namespace _2048_Game
         {
             InitializeComponent();
 
+            KeyPreview = true;
+
             texts[0, 0] = TextBox00;
             texts[1, 0] = TextBox10;
             texts[2, 0] = TextBox20;
@@ -98,14 +100,12 @@ namespace _2048_Game
                 for (int x = 0; x < cells.GetLength(0); x++)
                 {
                     texts[x, y].Text = cells[x, y] != 0 ? cells[x, y].ToString() : "";
-                    s += texts[x, y].Text + ", ";
+                    s += cells[x, y] + ", ";
                 }
                 s += "\n";
             }
 
             System.Diagnostics.Debug.WriteLine(s);
-
-            
         }
 
         private void btn_restart_Click(object sender, EventArgs e)
@@ -113,6 +113,30 @@ namespace _2048_Game
             gb.Restart();
             gb.NextRound();
             gb.Update(this);
+        }
+
+        private void Main_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Up:
+                    btn_up_Click(null, null);
+                    break;
+                case Keys.Down:
+                    btn_down_Click(null, null);
+                    break;
+                case Keys.Right:
+                    btn_right_Click(null, null);
+                    break;
+                case Keys.Left:
+                    btn_left_Click(null, null);
+                    break;
+            }
+        }
+
+        private void Main_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
