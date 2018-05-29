@@ -10,11 +10,13 @@ namespace _2048_Game
     {
         public int[,] cells { get; private set; }
 
+        public bool isLost { get; private set; }
+
         int width;
         int height;
 
         int currentRound = 0;
-
+        
         Random r = new Random();
 
         public GameBoard(int width, int height)
@@ -31,6 +33,18 @@ namespace _2048_Game
                     cells[x, y] = 0;
                 }
             }
+        }
+
+        public GameBoard Copy()
+        {
+            GameBoard gb = new GameBoard(width, height);
+
+            gb.cells = (int[,])cells.Clone();
+            gb.currentRound = currentRound;
+            gb.r = r;
+            gb.isLost = isLost;
+            
+            return gb;
         }
 
         public void Restart()
@@ -51,23 +65,6 @@ namespace _2048_Game
 
         public void NextRound()
         {
-            int lost = 0;
-            for (int x = 0; x < cells.GetLength(0); x++)
-            {
-                for (int y = 0; y < cells.GetLength(1); y++)
-                {
-                    if(cells[x, y] == 0)
-                    {
-                        lost++;
-                    }
-                }
-            }
-
-            if(lost < 2)
-            {
-                //GameOver
-            }
-
             int? i = null;
             int? j = null;
             int tries = 0;
@@ -93,7 +90,39 @@ namespace _2048_Game
                     }
                 }
             }
+
+            isLost = CheckLost();
+
             currentRound++;
+        }
+
+        public bool CheckLost()
+        {
+            GameBoard gb = this.Copy();
+
+            var g = gb.Copy();
+            gb.Move(Dir.UP);
+            gb.Collide(Dir.UP);
+            if (gb.cells.OfType<int>().SequenceEqual(g.cells.OfType<int>()))
+            {
+                gb.Move(Dir.DOWN);
+                gb.Collide(Dir.DOWN);
+                if (gb.cells.OfType<int>().SequenceEqual(g.cells.OfType<int>()))
+                {
+                    gb.Move(Dir.LEFT);
+                    gb.Collide(Dir.LEFT);
+                    if (gb.cells.OfType<int>().SequenceEqual(g.cells.OfType<int>()))
+                    {
+                        gb.Move(Dir.RIGHT);
+                        gb.Collide(Dir.RIGHT);
+                        if (gb.cells.OfType<int>().SequenceEqual(g.cells.OfType<int>()))
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
         public void Move(Dir dir)

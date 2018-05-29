@@ -49,6 +49,7 @@
             this.btn_right = new System.Windows.Forms.Button();
             this.btn_down = new System.Windows.Forms.Button();
             this.btn_restart = new System.Windows.Forms.Button();
+            this.Lost_lbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TextBox00
@@ -253,7 +254,7 @@
             // 
             // btn_restart
             // 
-            this.btn_restart.Location = new System.Drawing.Point(308, 248);
+            this.btn_restart.Location = new System.Drawing.Point(296, 247);
             this.btn_restart.Name = "btn_restart";
             this.btn_restart.Size = new System.Drawing.Size(75, 23);
             this.btn_restart.TabIndex = 20;
@@ -261,11 +262,20 @@
             this.btn_restart.UseVisualStyleBackColor = true;
             this.btn_restart.Click += new System.EventHandler(this.btn_restart_Click);
             // 
+            // Lost_lbl
+            // 
+            this.Lost_lbl.AutoSize = true;
+            this.Lost_lbl.Location = new System.Drawing.Point(293, 210);
+            this.Lost_lbl.Name = "Lost_lbl";
+            this.Lost_lbl.Size = new System.Drawing.Size(0, 13);
+            this.Lost_lbl.TabIndex = 21;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 283);
+            this.Controls.Add(this.Lost_lbl);
             this.Controls.Add(this.btn_restart);
             this.Controls.Add(this.btn_down);
             this.Controls.Add(this.btn_right);
@@ -292,6 +302,7 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Main_KeyPress);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -318,6 +329,7 @@
         private System.Windows.Forms.Button btn_right;
         private System.Windows.Forms.Button btn_down;
         private System.Windows.Forms.Button btn_restart;
+        private System.Windows.Forms.Label Lost_lbl;
     }
 }
 

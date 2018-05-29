@@ -94,6 +94,8 @@ namespace _2048_Game
         {
             gb.NextRound();
 
+            if (gb.isLost) Lost_lbl.Text = "Gameover!";
+
             string s = "";
             for (int y = 0; y < cells.GetLength(1); y++)
             {
@@ -110,6 +112,7 @@ namespace _2048_Game
 
         private void btn_restart_Click(object sender, EventArgs e)
         {
+            Lost_lbl.Text = "";
             gb.Restart();
             gb.NextRound();
             gb.Update(this);
