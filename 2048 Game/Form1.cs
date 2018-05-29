@@ -25,6 +25,7 @@ namespace _2048_Game
 
             KeyPreview = true;
 
+            // Setting up the text boxs
             texts[0, 0] = TextBox00;
             texts[1, 0] = TextBox10;
             texts[2, 0] = TextBox20;
@@ -42,6 +43,7 @@ namespace _2048_Game
             texts[2, 3] = TextBox23;
             texts[3, 3] = TextBox33;
 
+            // Starting the game
             gb.NextRound();
             gb.Update(this);
         }
@@ -51,7 +53,7 @@ namespace _2048_Game
             int[,] cells = (int[,])gb.cells.Clone();
 
             gb.Move(Dir.UP);
-            gb.Collide(Dir.UP);
+            gb.Sum(Dir.UP);
             gb.Move(Dir.UP);
 
             if(!gb.cells.OfType<int>().SequenceEqual(cells.OfType<int>())) gb.Update(this);
@@ -62,7 +64,7 @@ namespace _2048_Game
             int[,] cells = (int[,])gb.cells.Clone();
 
             gb.Move(Dir.DOWN);
-            gb.Collide(Dir.DOWN);
+            gb.Sum(Dir.DOWN);
             gb.Move(Dir.DOWN);
 
             if (!gb.cells.OfType<int>().SequenceEqual(cells.OfType<int>())) gb.Update(this);
@@ -73,7 +75,7 @@ namespace _2048_Game
             int[,] cells = (int[,])gb.cells.Clone();
 
             gb.Move(Dir.RIGHT);
-            gb.Collide(Dir.RIGHT);
+            gb.Sum(Dir.RIGHT);
             gb.Move(Dir.RIGHT);
 
             if (!gb.cells.OfType<int>().SequenceEqual(cells.OfType<int>())) gb.Update(this);
@@ -84,7 +86,7 @@ namespace _2048_Game
             int[,] cells = (int[,])gb.cells.Clone();
 
             gb.Move(Dir.LEFT);
-            gb.Collide(Dir.LEFT);
+            gb.Sum(Dir.LEFT);
             gb.Move(Dir.LEFT);
 
             if (!gb.cells.OfType<int>().SequenceEqual(cells.OfType<int>())) gb.Update(this);
@@ -92,10 +94,13 @@ namespace _2048_Game
 
         public void UpdateTexts(int[,] cells)
         {
+            // Goes to the next round
             gb.NextRound();
 
+            // Checks if the play has lost yet
             if (gb.isLost) Lost_lbl.Text = "Gameover!";
 
+            // Changes the texts on the text boxes to match the cell value
             string s = "";
             for (int y = 0; y < cells.GetLength(1); y++)
             {
@@ -112,6 +117,7 @@ namespace _2048_Game
 
         private void btn_restart_Click(object sender, EventArgs e)
         {
+            // Restart the game
             Lost_lbl.Text = "";
             gb.Restart();
             gb.NextRound();
@@ -120,6 +126,7 @@ namespace _2048_Game
 
         private void Main_KeyDown(object sender, KeyEventArgs e)
         {
+            // Keyboard Support
             switch (e.KeyCode)
             {
                 case Keys.Up:
@@ -135,11 +142,6 @@ namespace _2048_Game
                     btn_left_Click(null, null);
                     break;
             }
-        }
-
-        private void Main_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
     }
 }
