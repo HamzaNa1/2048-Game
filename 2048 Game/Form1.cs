@@ -25,7 +25,7 @@ namespace _2048_Game
 
             KeyPreview = true;
 
-            // Setting up the text boxs
+            // Setting up the text boxes
             texts[0, 0] = TextBox00;
             texts[1, 0] = TextBox10;
             texts[2, 0] = TextBox20;
