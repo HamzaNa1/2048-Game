@@ -50,6 +50,7 @@
             this.btn_down = new System.Windows.Forms.Button();
             this.btn_restart = new System.Windows.Forms.Button();
             this.Lost_lbl = new System.Windows.Forms.Label();
+            this.lbl_score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TextBox00
@@ -270,11 +271,21 @@
             this.Lost_lbl.Size = new System.Drawing.Size(0, 13);
             this.Lost_lbl.TabIndex = 21;
             // 
+            // lbl_score
+            // 
+            this.lbl_score.AutoSize = true;
+            this.lbl_score.Location = new System.Drawing.Point(296, 171);
+            this.lbl_score.Name = "lbl_score";
+            this.lbl_score.Size = new System.Drawing.Size(38, 13);
+            this.lbl_score.TabIndex = 22;
+            this.lbl_score.Text = "Score:";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 283);
+            this.Controls.Add(this.lbl_score);
             this.Controls.Add(this.Lost_lbl);
             this.Controls.Add(this.btn_restart);
             this.Controls.Add(this.btn_down);
@@ -329,6 +340,7 @@
         private System.Windows.Forms.Button btn_down;
         private System.Windows.Forms.Button btn_restart;
         private System.Windows.Forms.Label Lost_lbl;
+        private System.Windows.Forms.Label lbl_score;
     }
 }
 

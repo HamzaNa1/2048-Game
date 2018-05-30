@@ -100,6 +100,9 @@ namespace _2048_Game
             // Checks if the play has lost yet
             if (gb.isLost) Lost_lbl.Text = "Gameover!";
 
+            // Add the score
+            lbl_score.Text = "Score: " + GetScore(gb); ;
+
             // Changes the texts on the text boxes to match the cell value
             string s = "";
             for (int y = 0; y < cells.GetLength(1); y++)
@@ -113,6 +116,20 @@ namespace _2048_Game
             }
 
             System.Diagnostics.Debug.WriteLine(s);
+        }
+
+        /// <summary>
+        /// Gets the current score
+        /// </summary>
+        /// <param name="gb">The GameBoard that has that score</param>
+        /// <returns>The current score of the gameboard.</returns>
+        private int GetScore(GameBoard gb)
+        {
+            int score = 0;
+
+            foreach (int i in gb.cells) if (i > score) score = i;
+
+            return score;
         }
 
         private void btn_restart_Click(object sender, EventArgs e)
